@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.header {
+  margin-top: 30px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.header h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header p {
+  font-size: 1.3em;
+  color: #fff;
+  max-width: 800px;
+  text-align: justify;
+  margin: 20px auto;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* GROUP CONTAINER */
+.group-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Batasi lebar maksimal */
+  margin-bottom: 50px;
+  padding: 20px; /* Tambahkan padding agar lebih seimbang */
+}
+
+
+/* SLIDES */
+.slide {
+  max-width: 1120px;
+  width: 100%;
+  background: linear-gradient(145deg, #fff, #f2f2f2);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 50px;
+  margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Pastikan konten tidak terpotong */
+}
+
+.slide:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+}
+
+/* DIVISI */
+.divisi {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* KARTU */
+.kartu {
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  margin: 15px !important;
+  padding: 20px !important;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  max-width: 100%;
+}
+
+.kartu:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.kartu-image {
+  position: relative;
+  height: 160px;
+  width: 160px;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid #beddf7;
+}
+
+.kartu-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 1.7em;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.deskripsi {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.instagram-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.6em;
+  color: #333;
+  padding: 10px;
+}
+
+.instagram-link:hover {
+  color: #E4405F;
+}
+
+.instagram-link {
+  position: relative;
+  z-index: 100; /* Tingkatkan jika diperlukan */
+}
+
+
+.linkedin-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.6em;
+  color: #333;
+  padding: 10px;
+}
+
+.linkedin-link:hover {
+  color: #0420f4;
+}
+
+.linkedin-link {
+  position: relative;
+  z-index: 100; /* Tingkatkan jika diperlukan */
+}
+
+/* FOOTER */
+footer {
+  margin-top: 50px;
+}
+
+.sponsor-text {
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.sponsor-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.sponsor-gallery img {
+  width: 120px;
+  margin: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.sponsor-gallery img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+.anggota {
+  width: 100%;
+  max-width: 1200px; /* Batasi lebar konten */
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.gambar-konten, .overlay {
+  pointer-events: none; /* Memastikan elemen ini tidak menghalangi klik */
+}
+
+
+/* ANIMATIONS */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .header h1 {
+      font-size: 1.8em; /* Ubah ukuran font untuk layar lebih kecil */
+  }
+
+  .header p {
+    font-size: 0.8em; /* Sesuaikan padding untuk layar kecil */
+  }
+
+  .group-container {
+    padding: 10px; /* Kurangi padding untuk ruang yang lebih kecil */
+  }
+  
+  .slide {
+    padding: 30px; /* Sesuaikan padding pada slide untuk layar kecil */
+  }
+  
+  .divisi {
+      font-size: 1.5em; /* Ubah ukuran font untuk divisi di mobile */
+  }
+
+  .kartu {
+      margin: 10px;
+      padding: 15px;
+  }
+
+  .kartu-image {
+      height: 120px; /* Sesuaikan ukuran gambar di mobile */
+      width: 120px; /* Sesuaikan ukuran gambar di mobile */
+  }
+
+  .name {
+      font-size: 1.5em; /* Ubah ukuran nama di mobile */
+  }
+
+  .deskripsi {
+      font-size: 0.9em; /* Ubah ukuran deskripsi di mobile */
+  }
+
+  .anggota {
+    padding: 15px; /* Kurangi padding di sekeliling konten */
+  }
+
+}

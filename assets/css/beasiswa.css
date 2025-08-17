@@ -1,0 +1,154 @@
+/* Global styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden; /* Hindari scrollbar horizontal */
+}
+
+#hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hero h1 {
+    padding-top: 0px;
+}
+
+/* Atau jika Anda ingin menggunakan padding */
+h1 {
+    padding-top: 50px; /* Atur nilai sesuai kebutuhan */
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+    font-size: 1rem;
+}
+
+h6 {
+    text-align: justify;
+    font-size: 1rem;
+}
+
+/* Header styling with animation */
+h2, h3 {
+    text-align: left;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: 0; /* Untuk animasi */
+    animation: fadeIn 1s ease-out forwards; /* Animasi fadeIn */
+}
+
+/* Animasi untuk fade in */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Ordered list styling */
+ol {
+    counter-reset: section;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ol > li {
+    text-align: ju;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+    color: #000000;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideIn 0.5s ease-out forwards;
+    animation-delay: 1s;
+}
+
+ol > li:before {
+    counter-increment: section;
+    content: counter(section) ". ";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Sub-list styling */
+ol li ol {
+    list-style-type: lower-alpha;
+    margin-left: 20px;
+}
+
+ol li ol li {
+    padding-left: 0;
+    margin-bottom: 5px;
+}
+
+/* Mengatur sub-list dengan huruf */
+ol ol {
+    counter-reset: none; /* Nonaktifkan counter */
+    list-style-type: lower-alpha; /* Menggunakan tipe penomoran default huruf kecil */
+    padding-left: 20px;
+}
+
+ol ol li {
+    padding-left: 0;
+    position: relative;
+}
+
+
+ol ol li:before {
+    content: none; /* Hilangkan pseudo-elemen untuk sub-list */
+}
+
+/* Mengatur animasi untuk list */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.8rem;
+    }
+}
+
+footer{
+    margin-top: 40px;
+}
+
+footer h1, footer h2, footer h3, footer p {
+    text-align: left !important;
+}
+

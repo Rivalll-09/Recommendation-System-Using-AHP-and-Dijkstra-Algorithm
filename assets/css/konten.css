@@ -1,0 +1,58 @@
+.bg-image {
+    background: url(/assets/image/a.jpg);
+    width: 100%;
+    height: auto; /* Ubah dari 100% ke auto agar tinggi mengikuti konten */
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 7%;
+    position: relative;
+}
+
+.bg-content {
+    position: relative; /* Ubah absolute ke relative */
+    padding: 20px; /* Tambahkan padding untuk ruang di dalam konten */
+    margin-bottom: 50px; /* Tambahkan margin bawah untuk mencegah tumpang tindih */
+    z-index: 1; /* Beri z-index lebih tinggi */
+}
+
+.bg-content h1 {
+    color: black;
+    font-size: 42px;
+    margin-bottom: 30px;
+    white-space: nowrap; /* Mencegah teks melompat ke baris berikutnya */
+    overflow: hidden; /* Menyembunyikan teks yang tidak terlihat */
+    border-right: 5px solid #000; /* Menambahkan imitasi kursor ketik */
+    animation: typing 3s steps(40) infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width:40%;
+    }
+}
+
+.bg-content p {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 20px; /* Kurangi margin-bottom agar tidak terlalu panjang */
+}
+
+.bg-content a {
+    background: var(--secclr);
+    padding: 1.5rem 3rem;
+    border-radius: 15px;
+    color: var(--mainclr);
+    font-size: 1.5rem;
+}
+
+.bg-content a:hover {
+    background: var(--secclr);
+    border: 3px solid var(--secclr);
+}
+
+section.about {
+    padding-top: 50px; /* Tambahkan padding-top pada section berikutnya untuk memberi ruang */
+}
